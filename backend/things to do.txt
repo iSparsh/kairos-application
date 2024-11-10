@@ -1,0 +1,4 @@
+1. use envvars to store secrets.
+env file > add to your gitignore.
+
+use CAnvas restapi to acccess data that i need.
