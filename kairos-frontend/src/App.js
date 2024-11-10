@@ -1,26 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// importing components from react-router-dom package
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+} from "react-router-dom";
 
-function App() {
+// import Home component
+import Home from "./pages/home";
+// import About component
+import Calendar from "./pages/calendar";
+// import ContactUs component
+import Settings from "./pages/settings";
+// import ContactUs component
+import Assignments from "./pages/assignments";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header"> Kairos
-        
-        <p>
-          Made by rishib sprash brin
-        </p>
-      <ol className="list-decimal text-2xl w-full flex flex-col pl-12 gap-1">
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/assignments" element={<Assignments />} />
+          <Route path="*" element={<Navigate to="/" />}
+          />
+        </Routes>
+      </Router>
 
+
+      <>
+			<div className="card flex flex-col gap-2 w-[30em]">
+				<h1 className="w-full text-3xl text-center">this is the app</h1>
+        <li>
+					<a href="/assignments">Assignments</a>
+				</li>
         <li>
 					<a href="/calendar">Calender</a>
 				</li>
-        
-      </ol>
+        <li>
+					<a href="/settings">Settings</a>
+				</li>
+			</div>
+      
 
-
-      </header>
-    </div>
+		  </>
+    </>
   );
 }
 
-export default App;
