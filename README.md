@@ -1,1 +1,1 @@
-# kairos-react
+# kairos-application
