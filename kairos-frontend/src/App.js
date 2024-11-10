@@ -29,24 +29,6 @@ export default function App() {
           />
         </Routes>
       </Router>
-
-
-      <>
-			<div className="card flex flex-col gap-2 w-[30em]">
-				<h1 className="w-full text-3xl text-center">this is the app</h1>
-        <li>
-					<a href="/assignments">Assignments</a>
-				</li>
-        <li>
-					<a href="/calendar">Calender</a>
-				</li>
-        <li>
-					<a href="/settings">Settings</a>
-				</li>
-			</div>
-      
-
-		  </>
     </>
   );
 }
