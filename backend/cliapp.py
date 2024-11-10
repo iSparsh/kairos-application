@@ -3,11 +3,11 @@ from functions import *
 # This app is a basic interface for creating an interface to interact with the backend
 print("Welcome to the CLI inerface")
 
-# input("Press any button to continue to authentication")
+input("Press any button to continue to authentication")
 
-# service = google_authenticate()
+service = google_authenticate()
 
-# print("AUTHENTICATED")
+print("AUTHENTICATED")
 
 # created_event = service.events().quickAdd(
 #     calendarId='primary',
@@ -15,5 +15,14 @@ print("Welcome to the CLI inerface")
 
 # print(created_event['id'])
 
-print(get_all_user_courses())
-print(get_course_name_by_id("417606"))
+test_ass = get_all_todo_assignments()
+
+# if service:
+#     blocks = schedule_assignment(service, test_ass, 2, False)
+#     print("DONE SCHEDULING IN GOOGLE CALENDAR")
+#     print(blocks)
+
+# else:
+#     print("Error in getting the service variable.")
+
+print(test_ass)
